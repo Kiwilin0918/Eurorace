@@ -1,0 +1,11 @@
+.mm-menu {
+  --mm-color-text:#565a5c;
+}
+.mm-navbar{
+  --mm-color-background:#042C61;
+  --mm-color-text-dimmed:#fff;
+  --mm-color-border:rgba(255, 255, 255, 0);
+}
+.mm-btn:before{
+  --mm-color-button:#fff;
+}
