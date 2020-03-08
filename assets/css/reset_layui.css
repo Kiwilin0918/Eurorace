@@ -1,5 +1,5 @@
 body,html{
-  font-family: -apple-system, BlinkMacSystemFont,Tahoma, SimSun, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans","Microsoft Yahei", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font: 14px "microsoft yahei", helvetica, arial;
 }
 a {
   color: #0D54B4; }
