@@ -11,7 +11,7 @@ document.addEventListener(
 //   //     ]
 //   //  });
   new Mmenu( "#menu", {
-    content:["close"],
+    // content:["close"],
     "extensions": [
       "theme-white",
       // "position-front",
@@ -25,3 +25,25 @@ document.addEventListener(
 //       new Mmenu( "#menu" );
 //   }
 // );
+
+// 原始版
+// new Mmenu( document.querySelector( '#menu' ));
+
+// document.addEventListener( 'click', function( evnt ) {
+//   var anchor = evnt.target.closest( 'a[href^="#/"]' );
+//   if ( anchor ) {
+//     alert('Thank you for clicking, but that\'s a demo link.');
+//     evnt.preventDefault();
+//   }
+// });
+
+// copy
+var clipboard = new ClipboardJS('.btn');
+
+clipboard.on('success', function(e) {
+    console.log(e);
+});
+
+clipboard.on('error', function(e) {
+    console.log(e);
+});

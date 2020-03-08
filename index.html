@@ -3,135 +3,188 @@
   <head>
     <title>Eurorace</title>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="stylesheets/all.css">
     <link rel="stylesheet" href="assets/css/fontawesome.min.css">
     <link rel="stylesheet" href="assets/css/demo.css">
     <link rel="stylesheet" href="assets/css/mmenu.css">
     <link rel="stylesheet" href="assets/css/mmenu_style.css">
+    <!-- layui放置处-->
+    <link rel="stylesheet" href="assets/css/layui.css">
+    <!-- 下面这只css要放在layui下方-->
+    <link rel="stylesheet" href="assets/css/reset_layui.css">
     <script src="javascripts/vendor.js"></script>
   </head>
   <body>
+    <div class="header bg-primary fixed-top"><a href="#menu" class="menu"><span></span></a><a href="#page" class="kw-close"><i class="fa fa-times text-white fa-lg"></i></a>
+      <!-- 未登入时的區塊-->
+      <div class="login-none"><a href="#" class="btn btn-linearY mr-2"><i class="fas fa-user mr-1"></i>登入</a><a href="#" class="btn btn-outline-wa"><i class="far fa-clipboard mr-1"></i>注册</a></div>
+      <!-- 语系选择-->
+      <div class="ml-auto">
+        <div class="dropdown ml-1">
+          <button id="dropdown-lang" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="btn btn-outline-wa dropdown-toggle">简中</button>
+          <div aria-labelledby="dropdown-lang" class="dropdown-menu"><a href="#" class="dropdown-item">简中</a><a href="#" class="dropdown-item">日本语</a><a href="#" class="dropdown-item">English</a></div>
+        </div>
+      </div>
+    </div>
+    <nav id="menu">
+      <!-- 未登入時的menu-->
+      <ul>
+            <li class="bg-primarydark pt-4 pb-5 d-flex align-items-center"><img src="images/web_logo.png" srcset="images/web_logo@2x.png 2x" alt="" class="logo img-fluid d-block mx-auto"></li>
+        <li class="text-center"><a href="#" class="text-primary">请先登入</a></li>
+      </ul>
+    </nav>
     <div id="page">
-      <div class="header bg-primary fixed-top"><a href="#menu" class="menu"><span></span></a><a href="#page" class="kw-close"><i class="fa fa-times text-white fa-lg"></i></a><a href="#" class="btn btn-linearY mr-2"><i class="fas fa-user mr-1"></i>登入</a><a href="#" class="btn btn-outline-wa"><i class="far fa-clipboard mr-1"></i>注册</a>
-        <div class="ml-auto">
-          <div class="dropdown">
-            <button id="dropdown-lang" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="btn btn-outline-wa dropdown-toggle">简体中文</button>
-            <div aria-labelledby="dropdown-lang" class="dropdown-menu"><a href="#" class="dropdown-item">简体中文</a><a href="#" class="dropdown-item">日本语</a><a href="#" class="dropdown-item">English</a></div>
+      <div class="wrapper">
+        <div class="banner"><img src="images/banner.jpg" srcset="images/banner@2x.jpg 2x" alt="" class="w-100"></div>
+        <!-- 2020.03.08加入linebox css-->
+        <section class="game-box linebox">
+          <h5 class="game-title">热门赛事</h5><a href="#">
+            <div class="game-list">
+              <div class="game-block"><span class="text-primary">法国足球甲级联赛</span><span class="float-right text-secondary">2020.03.15 00:30</span></div>
+              <div class="game-team">
+                <div class="col-5">
+                  <div class="team-flow text-right">蒙彼利埃</div>
+                </div>
+                <div class="col-center">
+                  <div class="text-center">VS</div>
+                </div>
+                <div class="col-5">
+                  <div class="team-flow text-left">马赛</div>
+                </div>
+              </div>
+            </div></a><a href="#">
+            <div class="game-list">
+              <div class="game-block"><span class="text-primary">义大利足球甲级联赛</span><span class="float-right text-secondary">2020.03.15 01:00</span></div>
+              <div class="game-team">
+                <div class="col-5">
+                  <div class="team-flow text-right">热那亚</div>
+                </div>
+                <div class="col-center">
+                  <div class="text-center">VS</div>
+                </div>
+                <div class="col-5">
+                  <div class="team-flow text-left">帕尔马</div>
+                </div>
+              </div>
+            </div></a><a href="#">
+            <div class="game-list">
+              <div class="game-block"><span class="text-primary">英格兰足球超级联赛</span><span class="float-right text-secondary">2020.03.15 01:30</span></div>
+              <div class="game-team">
+                <div class="col-5">
+                  <div class="team-flow text-right">阿斯顿雷拉</div>
+                </div>
+                <div class="col-center">
+                  <div class="text-center">VS</div>
+                </div>
+                <div class="col-5">
+                  <div class="team-flow text-left">切尔西</div>
+                </div>
+              </div>
+            </div></a><a href="#">
+            <div class="game-list">
+              <div class="game-block"><span class="text-primary">德国甲级足球联赛</span><span class="float-right text-secondary">2020.03.15 16:00</span></div>
+              <div class="game-team">
+                <div class="col-5">
+                  <div class="team-flow text-right">柏林联合</div>
+                </div>
+                <div class="col-center">
+                  <div class="text-center">VS</div>
+                </div>
+                <div class="col-5">
+                  <div class="team-flow text-left">拜仁慕尼黑</div>
+                </div>
+              </div>
+            </div></a><a href="#">
+            <div class="game-list">
+              <div class="game-block"><span class="text-primary">西班牙足球甲级联赛</span><span class="float-right text-secondary">2020.03.15 01:30</span></div>
+              <div class="game-team">
+                <div class="col-5">
+                  <div class="team-flow text-right">马略卡</div>
+                </div>
+                <div class="col-center">
+                  <div class="text-center">VS</div>
+                </div>
+                <div class="col-5">
+                  <div class="team-flow text-left">巴塞罗那</div>
+                </div>
+              </div>
+            </div></a>
+          <!-- 2020.03.08 新增查看更多--><a href="#" class="mt-2 mb-1 more">查看更多<i class="fas fa-arrow-right text-primary ml-2"></i></a>
+        </section>
+        <!-- 2020.03.08加入linebox css,并把内容包在里面-->
+        <section class="pt-3 linebox">
+          <h5 class="game-title">联盟队伍</h5>
+          <section class="bg-white p-3 mb-3">
+            <ul id="pills-tab" role="tablist" class="nav nav-pills nav-justified mb-3">
+              <li class="nav-item"><a id="pills-liga-tab" data-toggle="pill" href="#pills-liga" role="tab" aria-controls="pills-liga" aria-selected="true" class="nav-link active">德甲</a></li>
+              <li class="nav-item"><a id="pills-laliga-tab" data-toggle="pill" href="#pills-laliga" role="tab" aria-controls="pills-laliga" aria-selected="false" class="nav-link">西甲</a></li>
+            </ul>
+            <div id="pills-tabContent" class="tab-content pt-3">
+              <div id="pills-liga" role="tabpanel" aria-labelledby="pills-liga-tab" class="tab-pane fade show active">
+                <div class="team-list"><img src="images/liga/team_0001.png" alt="" class="img-fluid icon-team"/><span>拜仁慕尼黑</span></div>
+                <div class="team-list"><img src="images/liga/team_0002.png" alt="" class="img-fluid icon-team"/><span>门兴格拉德巴赫</span></div>
+                <div class="team-list"><img src="images/liga/team_0003.png" alt="" class="img-fluid icon-team"/><span>云达不莱梅</span></div>
+                <div class="team-list"><img src="images/liga/team_0004.png" alt="" class="img-fluid icon-team"/><span>弗赖堡</span></div>
+                <div class="team-list"><img src="images/liga/team_0005.png" alt="" class="img-fluid icon-team"/><span>多特蒙德</span></div>
+                <div class="team-list"><img src="images/liga/team_0006.png" alt="" class="img-fluid icon-team"/><span>杜塞尔多夫</span></div>
+                <div class="team-list"><img src="images/liga/team_0007.png" alt="" class="img-fluid icon-team"/><span>沃尔夫斯堡</span></div>
+                <div class="team-list"><img src="images/liga/team_0008.png" alt="" class="img-fluid icon-team"/><span>沙尔克04</span></div>
+                <div class="team-list"><img src="images/liga/team_0009.png" alt="" class="img-fluid icon-team"/><span>帕德博恩</span></div>
+                <div class="team-list"><img src="images/liga/team_0010.png" alt="" class="img-fluid icon-team"/><span>法兰克福</span></div>
+                <div class="team-list"><img src="images/liga/team_0011.png" alt="" class="img-fluid icon-team"/><span>柏林联合</span></div>
+                <div class="team-list"><img src="images/liga/team_0012.png" alt="" class="img-fluid icon-team"/><span>科隆</span></div>
+                <div class="team-list"><img src="images/liga/team_0013.png" alt="" class="img-fluid icon-team"/><span>柏林赫塔</span></div>
+                <div class="team-list"><img src="images/liga/team_0014.png" alt="" class="img-fluid icon-team"/><span>美因茨</span></div>
+                <div class="team-list"><img src="images/liga/team_0015.png" alt="" class="img-fluid icon-team"/><span>勒沃库森</span></div>
+                <div class="team-list"><img src="images/liga/team_0016.png" alt="" class="img-fluid icon-team"/><span>奥格斯堡</span></div>
+                <div class="team-list"><img src="images/liga/team_0017.png" alt="" class="img-fluid icon-team"/><span>霍芬海姆</span></div>
+                <div class="team-list"><img src="images/liga/team_0018.png" alt="" class="img-fluid icon-team"/><span>RB莱比锡</span></div>
+              </div>
+              <div id="pills-laliga" role="tabpanel" aria-labelledby="pills-laliga-tab" class="tab-pane fade">
+                <div class="team-list"><img src="images/laliga/team_0019.png" alt="" class="img-fluid icon-team"/><span>马德里竞技</span></div>
+                <div class="team-list"><img src="images/laliga/team_0020.png" alt="" class="img-fluid icon-team"/><span>马略卡</span></div>
+                <div class="team-list"><img src="images/laliga/team_0021.png" alt="" class="img-fluid icon-team"/><span>巴拉多利德</span></div>
+                <div class="team-list"><img src="images/laliga/team_0022.png" alt="" class="img-fluid icon-team"/><span>巴塞罗那</span></div>
+                <div class="team-list"><img src="images/laliga/team_0023.png" alt="" class="img-fluid icon-team"/><span>比利亚雷亚尔</span></div>
+                <div class="team-list"><img src="images/laliga/team_0024.png" alt="" class="img-fluid icon-team"/><span>瓦伦西亚</span></div>
+                <div class="team-list"><img src="images/laliga/team_0025.png" alt="" class="img-fluid icon-team"/><span>毕尔巴鄂竞技</span></div>
+                <div class="team-list"><img src="images/laliga/team_0026.png" alt="" class="img-fluid icon-team"/><span>西班牙人</span></div>
+                <div class="team-list"><img src="images/laliga/team_0027.png" alt="" class="img-fluid icon-team"/><span>阿拉维斯</span></div>
+                <div class="team-list"><img src="images/laliga/team_0028.png" alt="" class="img-fluid icon-team"/><span>皇家贝蒂斯</span></div>
+                <div class="team-list"><img src="images/laliga/team_0029.png" alt="" class="img-fluid icon-team"/><span>皇家马德里</span></div>
+                <div class="team-list"><img src="images/laliga/team_0030.png" alt="" class="img-fluid icon-team"/><span>埃瓦尔</span></div>
+                <div class="team-list"><img src="images/laliga/team_0031.png" alt="" class="img-fluid icon-team"/><span>皇家社会</span></div>
+                <div class="team-list"><img src="images/laliga/team_0032.png" alt="" class="img-fluid icon-team"/><span>格拉纳达</span></div>
+                <div class="team-list"><img src="images/laliga/team_0033.png" alt="" class="img-fluid icon-team"/><span>莱万特</span></div>
+                <div class="team-list"><img src="images/laliga/team_0034.png" alt="" class="img-fluid icon-team"/><span>莱加内斯</span></div>
+                <div class="team-list"><img src="images/laliga/team_0035.png" alt="" class="img-fluid icon-team"/><span>奥萨苏纳</span></div>
+                <div class="team-list"><img src="images/laliga/team_0036.png" alt="" class="img-fluid icon-team"/><span>塞维利亚</span></div>
+                <div class="team-list"><img src="images/laliga/team_0037.png" alt="" class="img-fluid icon-team"/><span>赫塔费</span></div>
+                <div class="team-list"><img src="images/laliga/team_0038.png" alt="" class="img-fluid icon-team"/><span>塞尔塔</span></div>
+              </div>
+            </div>
+          </section>
+        </section>
+        <!--靜態頁面修改，請直接覆蓋-->
+        <div class="banner mb-0"><img src="images/e-2020.png" alt="" class="w-100"></div>
+        <div class="index-footer">
+          <div class="container-fluid">
+            <ul class="row align-items-center">
+              <li class="col-6"><img src="images/btc_logo.svg" alt="" class="img-fluid"></li>
+              <li class="col-6"><img src="images/eth_logo.svg" alt="" class="img-fluid"></li>
+              <li class="col-6"><img src="images/ripple.svg" alt="" class="img-fluid"></li>
+              <li class="col-6"><img src="images/tether-1.svg" alt="" class="img-fluid"></li>
+            </ul>
           </div>
         </div>
       </div>
-      <nav id="menu">
-        <ul>
-          <li class="bg-primarydark pt-4 pb-5 d-flex align-items-center"><img src="images/web_logo.png" srcset="images/web_logo@2x.png 2x" alt="" class="logo img-fluid d-block mx-auto"></li>
-          <li class="text-center"><a href="#" class="text-primary">请先登入</a></li>
-        </ul>
-        <ul>
-          <li class="bg-primarydark pt-4 pb-5 d-flex align-items-center"><img src="images/web_logo.png" srcset="images/web_logo@2x.png 2x" alt="" class="logo img-fluid d-block mx-auto"></li>
-          <li><a href="#">Home</a></li>
-          <li><span>我</span>
-            <ul>
-              <li><a href="#about/history">History</a></li>
-              <li><span>The team</span>
-                <ul>
-                  <li><a href="#about/team/management">Management</a></li>
-                  <li><a href="#about/team/sales">Sales</a></li>
-                  <li><a href="#about/team/development">Development</a></li>
-                </ul>
-              </li>
-              <li><a href="#about/address">Our address</a></li>
-            </ul>
-          </li>
-          <li><a href="#contact">Contact</a></li>
-          <li class="Divider">Other demos</li>
-          <li><a href="advanced.html">Advanced demo</a></li>
-          <li><a href="onepage.html">One page demo</a></li>
-        </ul>
-      </nav>
-      <div class="wrapper">
-        <div class="banner"><img src="images/banner.png" srcset="images/banner@2x.png 2x" alt="" class="w-100"></div>
-        <section class="game-box">
-          <h5 class="game-title">热门赛事</h5>
-          <div class="game-list">
-            <div class="game-block"><span class="text-primary">德国乙级联赛</span><span class="float-right text-secondary">2020.03.06 16:00</span></div>
-            <div class="game-team">
-              <div class="col-4 pr-2">
-                <div class="team-flow text-right">荷尔斯泰因基尔</div>
-              </div>
-              <div class="col-center">
-                <div class="text-center">VS</div>
-              </div>
-              <div class="col-4 pl-2">
-                <div class="team-flow text-left">菲尔特</div>
-              </div>
-            </div>
-          </div>
-          <div class="game-list">
-            <div class="game-block"><span class="text-primary">德国乙级联赛</span><span class="float-right text-secondary">2020.03.06 13:00</span></div>
-            <div class="game-team">
-              <div class="col-4 pr-2">
-                <div class="team-flow text-right">奥斯纳布鲁克</div>
-              </div>
-              <div class="col-center">
-                <div class="text-center">VS</div>
-              </div>
-              <div class="col-4 pl-2">
-                <div class="team-flow text-left">韦恩</div>
-              </div>
-            </div>
-          </div>
-          <div class="game-list">
-            <div class="game-block"><span class="text-primary">德国甲级联赛</span><span class="float-right text-secondary">2020.03.06 16:00</span></div>
-            <div class="game-team">
-              <div class="col-4 pr-2">
-                <div class="team-flow text-right">多特蒙德</div>
-              </div>
-              <div class="col-center">
-                <div class="text-center">VS</div>
-              </div>
-              <div class="col-4 pl-2">
-                <div class="team-flow text-left">弗赖堡</div>
-              </div>
-            </div>
-          </div>
-          <div class="game-list">
-            <div class="game-block"><span class="text-primary">德国甲级联赛</span><span class="float-right text-secondary">2020.03.06 16:00</span></div>
-            <div class="game-team">
-              <div class="col-4 pr-2">
-                <div class="team-flow text-right">霍芬海姆</div>
-              </div>
-              <div class="col-center">
-                <div class="text-center">VS</div>
-              </div>
-              <div class="col-4 pl-2">
-                <div class="team-flow text-left">拜仁慕尼黑</div>
-              </div>
-            </div>
-          </div>
-          <div class="game-list">
-            <div class="game-block"><span class="text-primary">德国甲级联赛</span><span class="float-right text-secondary">2020.03.06 16:00</span></div>
-            <div class="game-team">
-              <div class="col-4 pr-2">
-                <div class="team-flow text-right">美因茨</div>
-              </div>
-              <div class="col-center">
-                <div class="text-center">VS</div>
-              </div>
-              <div class="col-4 pl-2">
-                <div class="team-flow text-left">帕德博恩</div>
-              </div>
-            </div>
-          </div>
-        </section>
-        <section class="bg-white p-3"><img src="images/web_logo.png" srcset="images/web_logo@2x.png 2x" alt="" class="about-logo img-fluid mb-2">
-          <p>这边需要有公司的文案～～～</p>
-        </section>
-      </div>
-      <div class="footer">Copyright © 2020 Eurorace All rights reserved. </div>
     </div>
+    <div class="footer">Copyright © 2020 Eurorace All rights reserved. </div>
     <script src="javascripts/all.js"></script>
     <script src="assets/js/swiper_setting.js"></script>
+    <script src="assets/js/clipboard.min.js"></script>
     <script src="assets/js/mmenu.polyfills.js"></script>
     <script src="assets/js/mmenu.js"></script>
     <script src="assets/js/mmenu_setting.js"></script>
